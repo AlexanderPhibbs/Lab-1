@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h2> Change the colors</h2>
+</head>
+
+
+<body>
+    <p id="p2">Change my color</p>
+    <input type="text" id="input" value="">
+    <button onclick="getcolor()"> magic </button>
+</body>
+
+
+
+
+
+<script>
+    var colors;
+    function getcolor(){
+    colors = document.getElementById("input").value;
+    document.getElementById("p2").style.color = colors;
+    document.getElementById("p2").style["border-style"] = "solid";
+    document.getElementById("p2").style["border-color"] = color;
+    }
+
+
+
+</script>
+</html>

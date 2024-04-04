@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h2> Password verification</h2>
+</head>
+<body>
+    <div>
+    <h5>Login</h5>
+    <input type="text" id="input" value="">
+    <button onclick="passlogin()"> Login </button>
+    <p id="feedback"></p>
+    </div>
+</body>
+
+<script>
+    var verify = true;
+    var passw1, passw2;
+    function passlogin(){
+        console.log("test");
+        if(verify){
+            passw1 = document.getElementById("input").value;
+            if(passw1.length < 8){
+                document.getElementById("feedback").innerHTML = "Your password isn't long enough";
+            }
+            else{
+                passw1 = document.getElementById("input").value = "";
+                verify = !verify;
+            }
+        }
+        else{
+            passw2 = document.getElementById("input").value;
+            if (passw1 === passw2){
+                document.getElementById("feedback").innerHTML = "Your passwords are correct!";
+                verify = true;
+            }
+            else{
+                document.getElementById("feedback").innerHTML = "Your passwords do not match";
+                verify = true;
+            }
+        }
+
+    }
+
+
+
+</script>
+</html>
